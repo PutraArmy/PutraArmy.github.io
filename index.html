@@ -65,6 +65,12 @@
 	<body>
 		
 	<div class="fh5co-loader"></div>
+
+	
+	<audio autoplay hidden>
+		<source src="/music/music.mp3" type="audio/mpeg">
+	</audio>
+	
 	
 	<div id="page">
 	<nav class="fh5co-nav" role="navigation">
@@ -97,10 +103,13 @@
 		</div>
 	</header>
 
+	
+
 	<div id="fh5co-couple">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					
 					<h2>ِبِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيْم</h2>
 					<h3>Rabu, 04 Januari 2023</h3>
 					<p>Assalamu'alaikum Warahmatullahi Wabarakatuh <br>
@@ -198,48 +207,40 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-					<span>We Love Each Other</span>
-					<h2>Our Story</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+					<!-- <span>We Love Each Other</span> -->
+					<h2>Protokol Kesehatan</h2>
+					<p>Tanpa mengurangi rasa hormat, dikarenakan situasi yang sedang terjadi ditengah pandemi covid-19 ini kami memohon maaf karena acara pernikahan kami diselenggarakan sesuai peraturan dan himbauan pemerintah.</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12 col-md-offset-0">
 					<ul class="timeline animate-box">
 						<li class="animate-box">
-							<div class="timeline-badge" style="background-image:url(images/couple-1.jpg);"></div>
+							<div class="timeline-badge" style="background-image:url(images/wash-your-hands.png);"></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
-									<h3 class="timeline-title">First We Meet</h3>
-									<span class="date">December 25, 2015</span>
+									<h3 class="timeline-title">Mencuci Tangan</h3>
+									
 								</div>
-								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-								</div>
+								
 							</div>
 						</li>
 						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge" style="background-image:url(images/couple-2.jpg);"></div>
+							<div class="timeline-badge" style="background-image:url(images/mask.png);"></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
-									<h3 class="timeline-title">First Date</h3>
-									<span class="date">December 28, 2015</span>
-								</div>
-								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+									<h3 class="timeline-title">Menggunakan Masker</h3>
+									
 								</div>
 							</div>
 						</li>
 						<li class="animate-box">
-							<div class="timeline-badge" style="background-image:url(images/couple-3.jpg);"></div>
+							<div class="timeline-badge" style="background-image:url(images/social-distancing.png);"></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
-									<h3 class="timeline-title">In A Relationship</h3>
-									<span class="date">January 1, 2016</span>
+									<h3 class="timeline-title">Menjaga Jarak</h3>
 								</div>
-								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-								</div>
+								
 							</div>
 						</li>
 			    	</ul>
@@ -594,21 +595,21 @@
 	<script src="js/main.js"></script>
 
 	<script>
-    var d = new Date(new Date().getTime() + 100 * 120 * 120 * 2000);
+    // var d = new Date(new Date().getTime() + 100 * 120 * 120 * 2000);
 
     // default example
     simplyCountdown('.simply-countdown-one', {
-        year: d.getFullYear(),
-        month: d.getMonth() + 1,
-        day: d.getDate()
+        year: 2022,
+        month: 12,
+        day: 20,
     });
 
     //jQuery example
     $('#simply-countdown-losange').simplyCountdown({
-        year: d.getFullYear(),
-        month: d.getMonth() + 1,
-        day: d.getDate(),
-        enableUtc: false
+        year: 2022,
+        month: 12,
+        day: 20,
+        enableUtc: true
     });
 </script>
 

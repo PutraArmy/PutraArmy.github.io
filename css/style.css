@@ -489,6 +489,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .timeline > li > .timeline-panel {
   width: 40%;
   float: left;
+  margin-top: 50px;
   border: 1px solid #d4d4d4;
   padding: 30px;
   position: relative;
