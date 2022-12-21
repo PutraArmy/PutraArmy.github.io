@@ -105,14 +105,13 @@
                   <h1>Putri &amp; Junaidi</h1>
                   <h2>Rabu, 04 Januari 2023</h2>
                   <div class="simply-countdown simply-countdown-one"></div>
-                  <p>
-                    <div id="button"><a
-                      
-                      class="btn btn-default btn-sm"
-                      >Petunjuk Arah</a
-                    >
-				</div>
-                  </p>
+
+                  <a
+                    target="_blank"
+                    href="https://www.google.com/maps/search/?api=1&query=0.833154,108.908174"
+                    class="btn btn-default btn-sm"
+                    >Petunjuk Arah</a
+                  >
                 </div>
               </div>
             </div>
@@ -228,14 +227,13 @@
                         class="img-responsive"
                       />
                       <br />
-                      <p>
-                        <a
-                          target="_blank"
-                          href="https://www.google.com/maps/search/?api=1&query=0.833154,108.908174"
-                          class="btn btn-default btn-sm"
-                          >Petunjuk Arah</a
-                        >
-                      </p>
+
+                      <a
+                        target="_blank"
+                        href="https://www.google.com/maps/search/?api=1&query=0.833154,108.908174"
+                        class="btn btn-default btn-sm"
+                        >Petunjuk Arah</a
+                      >
                     </div>
                   </div>
                 </div>
@@ -365,12 +363,28 @@
           </div>
         </div>
       </div>
-	  
-	  
+
       <audio loop src="music.mp3" type="audio/mpeg"></audio>
       <!-- <audio controls>
         <source src="music.mp3" type="audio/mpeg" />
       </audio> -->
+
+      <div class="modalx" data-sampul="">
+        <div id="fh5co-cover">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div
+                class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box"
+              >
+                <h2>Putri &amp; Junaidi</h2>
+                <h1>Rabu, 04 Januari 2023</h1>
+
+                <a class="btn btn-default btn-sm" id="button">Buka Undangan</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="gototop js-top">
@@ -403,22 +417,22 @@
 
     <script>
       const audio = document.querySelector("audio");
-	  const button = document.querySelector("#button");
+      const button = document.querySelector("#button");
 
       button.addEventListener("click", () => {
-  if (audio.paused) {
-    audio.play();
-    icon.classList.remove('fa-volume-up');
-    icon.classList.add('fa-volume-mute');
-    
-  } else {
-    audio.pause();
-    icon.classList.remove('fa-volume-mute');
-    icon.classList.add('fa-volume-up');
-  }
-  button.classList.add("fade");
-});
+        audio.play();
+        $(".modalx").addClass("active");
+      });
 
+      $("#button").click(function (e) {
+        $(".modalx").addClass("active");
+        e.preventDefault();
+      });
+
+      $(".modal").click(function (e) {
+        $(".modal").removeClass("active");
+        e.preventDefault();
+      });
 
       // var d = new Date(new Date().getTime() + 100 * 120 * 120 * 2000);
 
