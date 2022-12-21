@@ -71,9 +71,7 @@
     <![endif]-->
   </head>
   <body>
-    <div class="fh5co-loader"></div>
-
-    <audio src="music/music.mp3" autoplay hidden></audio>
+    <!-- <div class="fh5co-loader"></div> -->
 
     <div id="page">
       <nav class="fh5co-nav" role="navigation">
@@ -108,12 +106,12 @@
                   <h2>Rabu, 04 Januari 2023</h2>
                   <div class="simply-countdown simply-countdown-one"></div>
                   <p>
-                    <a
-                      target="_blank"
-                      href="https://www.google.com/maps/search/?api=1&query=0.833154,108.908174"
+                    <div id="button"><a
+                      
                       class="btn btn-default btn-sm"
                       >Petunjuk Arah</a
                     >
+				</div>
                   </p>
                 </div>
               </div>
@@ -367,29 +365,12 @@
           </div>
         </div>
       </div>
-
-      <!-- <footer id="fh5co-footer" role="contentinfo">
-		<div class="container">
-
-			<div class="row copyright">
-				<div class="col-md-12 text-center">
-					<p>
-						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
-						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
-					</p>
-					<p>
-						<ul class="fh5co-social-icons">
-							<li><a href="#"><i class="icon-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble"></i></a></li>
-						</ul>
-					</p>
-				</div>
-			</div>
-
-		</div>
-	</footer> -->
+	  
+	  
+      <audio loop src="music.mp3" type="audio/mpeg"></audio>
+      <!-- <audio controls>
+        <source src="music.mp3" type="audio/mpeg" />
+      </audio> -->
     </div>
 
     <div class="gototop js-top">
@@ -421,6 +402,24 @@
     <script src="js/main.js"></script>
 
     <script>
+      const audio = document.querySelector("audio");
+	  const button = document.querySelector("#button");
+
+      button.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play();
+    icon.classList.remove('fa-volume-up');
+    icon.classList.add('fa-volume-mute');
+    
+  } else {
+    audio.pause();
+    icon.classList.remove('fa-volume-mute');
+    icon.classList.add('fa-volume-up');
+  }
+  button.classList.add("fade");
+});
+
+
       // var d = new Date(new Date().getTime() + 100 * 120 * 120 * 2000);
 
       // default example
@@ -436,12 +435,6 @@
         month: 1,
         day: 3,
         enableUtc: false,
-      });
-
-      window.addEventListener("DOMContentLoaded", (event) => {
-        const audio = document.querySelector("audio");
-        audio.volume = 1;
-        audio.play();
       });
     </script>
   </body>
